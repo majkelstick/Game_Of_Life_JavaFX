@@ -1,1 +1,1 @@
-"# Game_Of_Life_JavaFX" 
+Game of life implementation using JavaFX
