@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gol.gameoflife.view.ViewController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="1000.0" style="-fx-padding: 10 0 10 10">
+         <children>
+            <Button fx:id="playButton" alignment="CENTER" mnemonicParsing="false" onAction="#play" text="Play">
+               <HBox.margin>
+                  <Insets right="10.0" />
+
+               </HBox.margin>
+            </Button>
+            <Button fx:id="resetButton" alignment="CENTER" mnemonicParsing="false" onAction="#reset" text="Reset">
+                <HBox.margin>
+                    <Insets right="10.0" />
+
+                </HBox.margin>
+            </Button>
+            <HBox prefHeight="31.0" prefWidth="239.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                         <Label prefWidth="40" text="Size: ">
+                            <HBox.margin>
+                                <Insets right="5.0" top="5.0" />
+            
+                            </HBox.margin>
+                         </Label>
+                        <TextField fx:id="sizeInput" minWidth="50.0" prefColumnCount="3" text="20">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+            
+                            </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                   <Button fx:id="resizeButton" alignment="CENTER" mnemonicParsing="false" onAction="#resizeBoard"  prefWidth="100.0" text="Resize" HBox.hgrow="ALWAYS">
+                       <HBox.margin>
+                           <Insets right="10.0" />
+                       </HBox.margin>
+                   </Button>
+                  <Button fx:id="readFileButton" mnemonicParsing="false" onAction="#readFile" text="Read file">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="saveFileButton" mnemonicParsing="false" onAction="#saveFile" text="Save file">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+
+         </children>
+      </HBox>
+
+      <GridPane fx:id="boardPane" alignment="CENTER" gridLinesVisible="true" layoutX="0.0" layoutY="100.0" prefHeight="500.0" prefWidth="500.0" snapToPixel="false" VBox.vgrow="ALWAYS">
+
+      </GridPane>
+
+   </children>
+</VBox>
